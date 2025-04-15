@@ -1,0 +1,67 @@
+####################################
+###   client_config_map config   ###
+####################################
+
+instance_id: {instance_id}
+
+# Fetch trading pairs from all exchanges if True, otherwise fetch only from connected exchanges.
+fetch_pairs_from_all_exchanges: false
+
+log_level: INFO
+
+debug_console: false
+
+strategy_report_interval: 900.0
+
+logger_override_whitelist:
+- hummingbot.strategy.arbitrage
+- hummingbot.strategy.cross_exchange_market_making
+- conf
+
+log_file_path: /home/hummingbot/logs
+
+kill_switch_mode: {}
+
+# What to auto-fill in the prompt after each import command (start/config)
+autofill_import: disabled
+
+# MQTT Bridge configuration.
+mqtt_bridge:
+  mqtt_host: emqx
+  mqtt_port: 1883
+  mqtt_username: 'admin'
+  mqtt_password: 'public'
+  mqtt_namespace: hbot
+  mqtt_ssl: false
+  mqtt_logger: true
+  mqtt_notifier: true
+  mqtt_commands: true
+  mqtt_events: true
+  mqtt_external_events: true
+  mqtt_autostart: true
+
+# Error log sharing
+send_error_logs: true
+
+# Can store the previous strategy ran for quick retrieval.
+previous_strategy: some-strategy.yml
+
+# Advanced database options, currently supports SQLAlchemy's included dialects
+# Reference: https://docs.sqlalchemy.org/en/13/dialects/
+# To use an instance of SQLite DB the required configuration is 
+#   db_engine: sqlite
+# To use a DBMS the required configuration is
+#   db_host: 127.0.0.1
+#   db_port: 3306
+#   db_username: username
+#   db_password: password
+#   db_name: dbname
+db_mode:
+  db_engine: sqlite
+
+# Balance Limit Configurations
+# e.g. Setting USDT and BTC limits on Binance.
+# balance_asset_limit:
+#   binance:
+#     BTC: 0.1
+#     USDT: 1000 

@@ -1,0 +1,24 @@
+activation_bounds: 0.01
+connector_name: okx_perpetual
+controller_name: grid_strike
+controller_type: generic
+extra_balance_base_usd: 10.0
+grid_range_update_interval: 60
+grid_ranges:
+- end_price: 106440.92
+  id: R0
+  open_order_type: 3
+  side: 1
+  start_price: 67435.98
+  take_profit_order_type: 2
+  total_amount_pct: 0.5
+id: falcon-nebula_0.1
+leverage: 20
+manual_kill_switch: true
+max_open_orders: 5
+min_order_amount: 10.0
+min_spread_between_orders: 0.0001
+position_mode: HEDGE
+time_limit: 172800
+total_amount_quote: 100.0
+trading_pair: BTC-USDT

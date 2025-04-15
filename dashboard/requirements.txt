@@ -1,0 +1,13 @@
+- ccxt
+- streamlit
+- streamlit-extras
+- watchdog
+- plotly
+- pycoingecko
+- glom
+- defillama
+- statsmodels
+- pandas_ta
+- sqlalchemy
+- pyyaml
+- i18n
